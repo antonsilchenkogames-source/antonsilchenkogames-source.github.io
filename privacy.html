@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Poop Defense</title>
+<!--
+  Privacy policy for Poop Defense: Fly Swatter.
+  This one file is used twice: it is bundled into the app (Main menu → Privacy policy) and, published with
+  GitHub Pages from the docs/ folder, it is the public URL entered in Play Console.
+-->
+<style>
+:root{
+  --bg:#9CD27A; --paper:#FFF8E6; --ink:#2B1D12; --muted:#5E4A3A; --accent:#C8392D; --line:#E6D6AE;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2E4F2B; --paper:#221A13; --ink:#F3E6C4; --muted:#CDBB98; --accent:#FF8A7A; --line:#4A3A2A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2E4F2B; --paper:#221A13; --ink:#F3E6C4; --muted:#CDBB98; --accent:#FF8A7A; --line:#4A3A2A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+.card{background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:20px 20px 24px;box-shadow:5px 6px 0 var(--ink)}
+h1{font-size:1.6rem;line-height:1.2;margin:0 0 4px;color:var(--accent)}
+h2{font-size:1.1rem;margin:22px 0 6px}
+p,li{margin:0 0 8px}
+ul{padding-inline-start:22px;margin:0 0 8px}
+.meta{color:var(--muted);margin-bottom:14px}
+.back{display:inline-block;padding:4px 12px;border:2px solid var(--ink);border-radius:12px;color:var(--ink);text-decoration:none;background:var(--paper)}
+.back{margin:0 0 14px;font-size:1.05rem}
+.back[hidden]{display:none}
+a{color:var(--accent);overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+  <a class="back" id="back" href="#" hidden>← Back to the game</a>
+
+  <article class="card">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Poop Defense: Fly Swatter · Effective 30 September 2026</p>
+    <p>This policy explains what information the game <b>Poop Defense: Fly Swatter</b> (“the game”) uses. The game is made by Anton Silchenko (“we”). The game has no accounts and no servers of our own: <b>we do not collect, receive or store any of your personal data.</b> Some data is handled by Google services built into the game, as described below.</p>
+
+    <h2>1. Data stored only on your device</h2>
+    <p>The game saves your language, sound setting, best score, unlocked levels, stars and whether you bought “Remove ads”. This stays on your device (and in your Android device backup, if you have it turned on). We never receive it. Uninstalling the game or clearing its data deletes it.</p>
+
+    <h2>2. Advertising (Google AdMob)</h2>
+    <p>Unless you buy “Remove ads”, the game shows ads from Google AdMob. To show and measure ads and prevent fraud, Google may collect:</p>
+    <ul>
+      <li>device identifiers, such as the advertising ID and app set ID;</li>
+      <li>IP address, which can indicate your approximate location;</li>
+      <li>device and app information, ad interactions (for example, that an ad was shown or tapped) and diagnostic data.</li>
+    </ul>
+    <p>In the European Economic Area, the United Kingdom and Switzerland, the game asks for your consent before personalised ads are shown. You can change your choice at any time with the <b>Ad privacy</b> button in the main menu. Ads in the game are limited to content suitable for general audiences (rated PG or lower). You can reset or delete your advertising ID in your device’s Android settings.</p>
+    <p>How Google uses this data: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a> and <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+    <h2>3. Purchases (Google Play)</h2>
+    <p>“Remove ads” is sold through Google Play. Google processes the payment; we never see your payment details. The game only checks with Google Play whether the purchase exists. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h2>4. Children</h2>
+    <p>The game is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through the game, contact us and we will help remove it.</p>
+
+    <h2>5. Sharing and selling</h2>
+    <p>We do not sell or share personal data. Data is processed only by the Google services named above, under their own policies. Google’s SDKs send data over encrypted connections (HTTPS).</p>
+
+    <h2>6. Your choices</h2>
+    <ul>
+      <li>Change ad consent with the <b>Ad privacy</b> button (EEA, UK, Switzerland).</li>
+      <li>Reset or delete your advertising ID in Android settings.</li>
+      <li>Buy “Remove ads” to stop all ads in the game.</li>
+      <li>Uninstall the game to delete everything it stored on your device.</li>
+    </ul>
+
+    <h2>7. Changes</h2>
+    <p>If this policy changes, we will update this page and its effective date.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions about privacy: <a href="mailto:antonsilchenkogames@gmail.com">antonsilchenkogames@gmail.com</a></p>
+  </article>
+</main>
+<script>
+// Inside the app the page is opened from the game; offer a way back (the Android back button works too).
+if (window.AndroidBridge) {
+  const back = document.getElementById('back');
+  back.hidden = false;
+  back.addEventListener('click', e => { e.preventDefault(); history.back(); });
+}
+</script>
+</body>
+</html>
